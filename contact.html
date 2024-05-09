@@ -182,7 +182,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="comment-respond style-two mt-48 mt-lg-0">
-                        <form action="#" class="comment-form" name="submit-to-google-sheet">
+                        <form action="#" class="comment-form">
                             <div class="row gx-3">
                                 <div class="col-md-6">
                                     <div class="single-input-field">
@@ -205,7 +205,7 @@
                                 <div class="col-md-6">
                                     <div class="single-input-field style-two">
                                         <label>Service</label>
-                                        <select style="display: none;" name="Service">
+                                        <select style="display: none;">
                                             <option selected="">Select service</option>
                                             <option value="1">MuleSoft</option>
                                             <option value="2">Salesforce</option>
@@ -343,13 +343,13 @@
         <div class="footer-bottom-area bg-white">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-12 text-center">
+                    <div class="col-lg-6">
                         <div class="copyright-text">
                             <p>Copyright © <span id="currentYear"></span> GIA TECHNOLOGIES INC. All rights reserved.</p>
 
                         </div>
                     </div>
-                    <div class="col-lg-6 d-none">
+                    <div class="col-lg-6">
                         <div class="footer-bottom-menu">
                             <ul class="pl-0">
                                 <li>
@@ -381,18 +381,6 @@
     <script src="js/tilt.jquery.js"></script>
 
     <script src="js/custom.js"></script>
-
-    <script>
-        const scriptURL = '<SCRIPT URL>'
-        const form = document.forms['submit-to-google-sheet']
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
